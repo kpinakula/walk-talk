@@ -1,0 +1,22 @@
+.header {
+  margin-bottom: 1.5rem;
+
+  .siteName {
+    text-shadow: none;
+    background-image: none;
+
+    h3 {
+      display: inline;
+    }
+  }
+
+  .navigationLinks {
+    list-style: none;
+    float: right;
+
+    .navigationLink {
+      display: inline-block;
+      margin-right: 1rem;
+    }
+  }
+}
