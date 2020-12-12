@@ -1,14 +1,15 @@
 import React from 'react';
 import { graphql } from 'gatsby';
+import Img from 'gatsby-image';
 
 import Layout from '../components/layout';
 import Container from '../components/container';
-import Title from '../components/title';
+import ContainerFullWidth from '../components/containerFullWidth';
 
 import homeStyles from '../styles/home.module.scss';
 
 export default function Home({ data }) {
-  const heroImage = data.allContentfulKeyInfo.edges[0].node.heroImage.fluid.src;
+  const heroImage = data.allContentfulKeyInfo.edges[0].node.heroImage.fluid;
   const heroImageTitle =
     data.allContentfulKeyInfo.edges[0].node.heroImage.title;
   const { tagline } = data.allContentfulKeyInfo.edges[0].node.tagline;
@@ -16,12 +17,13 @@ export default function Home({ data }) {
 
   return (
     <Layout>
-      <Container>
-        <Title titleText="Home" />
+      <ContainerFullWidth>
         <div className={homeStyles.hero}>
-          <img src={heroImage} alt={heroImageTitle}></img>
-          <div>{tagline}</div>
+          <Img fluid={heroImage} alt={heroImageTitle} />
+          <div className={homeStyles.tagline}>{tagline}</div>
         </div>
+      </ContainerFullWidth>
+      <Container>
         <div>{cta}</div>
         {/* <div>
           {data.allContentfulWaypoint.edges.map(({ node }, index) => (
@@ -39,8 +41,8 @@ export const query = graphql`
       edges {
         node {
           heroImage {
-            fluid {
-              src
+            fluid(maxWidth: 800, maxHeight: 371) {
+              ...GatsbyContentfulFluid
             }
             title
           }
