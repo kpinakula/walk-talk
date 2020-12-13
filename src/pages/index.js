@@ -25,12 +25,8 @@ export default function Home({ data }) {
       </ContainerFullWidth>
       <Container>
         <div>{cta}</div>
-        {/* <div>
-          {data.allContentfulWaypoint.edges.map(({ node }, index) => (
-            <p key={index}>{node.name}</p>
-          ))}
-        </div> */}
       </Container>
+      <TourTypes />
     </Layout>
   );
 }
