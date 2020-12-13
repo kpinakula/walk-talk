@@ -5,6 +5,7 @@ import Img from 'gatsby-image';
 import Layout from '../components/layout';
 import Container from '../components/container';
 import ContainerFullWidth from '../components/containerFullWidth';
+import TourTypes from '../components/tourTypes';
 
 import homeStyles from '../styles/home.module.scss';
 
