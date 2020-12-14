@@ -1,7 +1,14 @@
 import Typography from 'typography';
-import fairyGateTheme from 'typography-theme-fairy-gates';
-
-const typography = new Typography(fairyGateTheme);
-
-export const { scale, rhythm, options } = typography;
+const typography = new Typography({
+  baseFontSize: '18px',
+  baseLineHeight: 1.666,
+  headerFontFamily: [
+    'Tahoma',
+    'Helvetica Neue',
+    'Verdana',
+    'Segoe UI',
+    'sans-serif',
+  ],
+  bodyFontFamily: ['Tahoma', 'Verdana', 'Segoe UI', 'sans-serif'],
+});
 export default typography;

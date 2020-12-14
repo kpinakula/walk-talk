@@ -1,3 +1,5 @@
+@import '../styles/theme.scss';
+
 .header {
   height: 16vh;
   padding: 0 1rem;
@@ -20,12 +22,15 @@
     align-self: center;
     margin-bottom: 0;
     justify-self: end;
-    text-shadow: none;
 
     .navigationLink {
       display: inline-block;
       margin: 1rem;
       // width: 100px;
+
+      a {
+        color: $red;
+      }
     }
   }
 }
