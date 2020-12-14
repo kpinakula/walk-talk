@@ -1,5 +1,8 @@
+@import './theme.scss';
+
 .hero {
   position: relative;
+  height: 84vh;
 
   picture::after {
     content: '';
@@ -11,35 +14,12 @@
     width: 100%;
   }
 
-  img {
-    width: 100%;
-    min-height: 100%;
-  }
-
   .tagline {
-    color: white;
-    font-size: 1em;
+    color: $light-green;
     width: 80%;
     left: 10%;
     position: absolute;
-    top: 10%;
-  }
-
-  @media screen and (min-width: 617px) {
-    .tagline {
-      font-size: 1.25em;
-      width: 60%;
-      left: 20%;
-      right: 20%;
-    }
-  }
-
-  @media screen and (min-width: 768px) {
-    .tagline {
-      font-size: 1.5em;
-      width: 60%;
-      left: 20%;
-      right: 20%;
-    }
+    top: 0;
+    margin: 2em auto;
   }
 }

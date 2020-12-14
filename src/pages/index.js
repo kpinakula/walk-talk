@@ -18,11 +18,16 @@ export default function Home({ data }) {
   return (
     <Layout>
       <div className={homeStyles.hero}>
-        <Img fluid={heroImage} alt={heroImageTitle} />
-        <div className={homeStyles.tagline}>{tagline}</div>
+        <Img
+          fluid={heroImage}
+          alt={heroImageTitle}
+          style={{ height: '100%', width: '100%' }}
+          imgStyle={{ objectFit: 'cover' }}
+        />
+        <h1 className={homeStyles.tagline}>{tagline}</h1>
       </div>
       <Container>
-        <div>{cta}</div>
+        <h2>{cta}</h2>
       </Container>
       <TourTypes />
     </Layout>
@@ -35,7 +40,7 @@ export const query = graphql`
       edges {
         node {
           heroImage {
-            fluid(maxWidth: 800, maxHeight: 371) {
+            fluid {
               ...GatsbyContentfulFluid
             }
             title
