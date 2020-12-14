@@ -1,15 +1,29 @@
 .toursContainer {
   .tourContainer {
     position: relative;
-    // padding: 0 1rem;
+    margin: 1.5rem 3rem;
 
     .tourType {
       color: white;
       font-size: 1em;
       position: absolute;
       top: 3%;
-      background: #18bcc6;
+      background: #1ca086;
       padding: 0 1rem;
+    }
+
+    .tourTypeDescription {
+      color: #ff0;
+      font-size: 1em;
+      position: absolute;
+      bottom: 0;
+      background: #5f6b698a;
+      padding: 0.5rem;
+      width: 100%;
+
+      p {
+        margin: 0;
+      }
     }
   }
 
@@ -26,9 +40,43 @@
   }
 }
 
-@media screen and (min-width: 668px) {
+@media screen and (min-width: 840px) {
   .toursContainer {
     display: grid;
     grid-template-columns: 50% 50%;
+
+    .tourContainer {
+      margin: 0;
+
+      .tourTypeDescription {
+        font-size: 1em;
+        padding: 1rem;
+        height: 38%;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 960px) {
+  .toursContainer {
+    .tourContainer {
+      .tourTypeDescription {
+        font-size: 1em;
+        padding: 1rem;
+        height: 28%;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1160px) {
+  .toursContainer {
+    .tourContainer {
+      .tourTypeDescription {
+        font-size: 1em;
+        padding: 1rem;
+        height: 20%;
+      }
+    }
   }
 }

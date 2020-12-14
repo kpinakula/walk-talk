@@ -9,7 +9,7 @@ export default function About({ data }) {
     <Layout>
       <Container>
         <h1>About {data.site.siteMetadata.title}</h1>
-        <p>CSS Modules are cool</p>
+        <p>Some info about us</p>
       </Container>
     </Layout>
   );
