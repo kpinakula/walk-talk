@@ -4,7 +4,6 @@ import Img from 'gatsby-image';
 
 import Layout from '../components/layout';
 import Container from '../components/container';
-import ContainerFullWidth from '../components/containerFullWidth';
 import TourTypes from '../components/tourTypes';
 
 import homeStyles from '../styles/home.module.scss';
@@ -18,12 +17,10 @@ export default function Home({ data }) {
 
   return (
     <Layout>
-      <ContainerFullWidth>
-        <div className={homeStyles.hero}>
-          <Img fluid={heroImage} alt={heroImageTitle} />
-          <div className={homeStyles.tagline}>{tagline}</div>
-        </div>
-      </ContainerFullWidth>
+      <div className={homeStyles.hero}>
+        <Img fluid={heroImage} alt={heroImageTitle} />
+        <div className={homeStyles.tagline}>{tagline}</div>
+      </div>
       <Container>
         <div>{cta}</div>
       </Container>

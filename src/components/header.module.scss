@@ -1,8 +1,13 @@
 .header {
-  margin: 4vh auto;
+  height: 16vh;
   padding: 0 1rem;
   display: grid;
   grid-template-columns: 10% 90%;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  background-color: white;
 
   .siteLogoLink {
     background-image: none;
@@ -12,8 +17,10 @@
   }
 
   .navigationLinks {
+    align-self: center;
     margin-bottom: 0;
     justify-self: end;
+    text-shadow: none;
 
     .navigationLink {
       display: inline-block;
