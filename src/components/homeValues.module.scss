@@ -2,8 +2,6 @@
 
 .valuesContainer {
     display: grid;
-    grid-template-rows: 30% 30% 30%;
-    row-gap: 5%;
 
   .valueContainer {
     display: grid;
@@ -29,13 +27,13 @@
         height: 100%;
         width: 80%;
         left: 10%;
-        color: $light-yellow;
+        color: $light-green;
         font-size: 2rem;
       }
     }
 
     .valueDescription {
-      background: $light-yellow;
+      background: $light-green;
       height: 100%;
       padding: 1rem;
       display: grid;

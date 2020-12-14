@@ -2,6 +2,7 @@ import React from 'react';
 import { graphql } from 'gatsby';
 
 import Layout from '../components/layout';
+import Spacing from '../components/spacing';
 import HomeHero from '../components/homeHero';
 import Container from '../components/container';
 import HomeTourTypes from '../components/homeTourTypes';
@@ -13,10 +14,12 @@ export default function Home({ data }) {
   return (
     <Layout>
       <HomeHero />
-      <Container>
+      <Container noBg>
         <h2>{cta}</h2>
       </Container>
+      <Spacing />
       <HomeTourTypes />
+      <Spacing />
       <HomeValues />
     </Layout>
   );

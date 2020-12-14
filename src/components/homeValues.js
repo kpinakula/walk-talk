@@ -4,6 +4,7 @@ import Img from 'gatsby-image';
 import { renderRichText } from 'gatsby-source-contentful/rich-text';
 
 import Container from './container';
+import Spacing from './spacing';
 import styles from './homeValues.module.scss';
 
 export default function HomeValues() {
@@ -30,9 +31,10 @@ export default function HomeValues() {
 
   return (
     <div>
-      <Container>
+      <Container noBg>
         <h2>Our Values</h2>
       </Container>
+      <Spacing />
       <div className={styles.valuesContainer}>
         {values.map((value, index) => {
           return (
@@ -49,6 +51,7 @@ export default function HomeValues() {
               <div className={styles.valueDescription}>
                 {renderRichText(value.description)}
               </div>
+              <Spacing />
             </div>
           );
         })}
