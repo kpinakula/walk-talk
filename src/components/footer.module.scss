@@ -1,0 +1,50 @@
+@import '../styles/theme.scss';
+
+.footer {
+  padding: 1rem;
+  background-color: $dark-grey;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+
+  .siteLogoLink {
+    min-width: 40px;
+    max-width: 80px;
+  }
+
+  .footerNavigation1 {
+    grid-row-start: 1;
+    grid-column-start: 2;
+  }
+
+  .footerNavigation2 {
+    grid-row-start: 1;
+    grid-column-start: 3;
+  }
+
+  .footerNavigation {
+    list-style: none;
+    justify-self: center;
+
+    .navigationLink {
+      margin-bottom: 0;
+      text-align: left;
+    }
+
+    a {
+      color: $white;
+      text-decoration: none;
+    }
+  }
+}
+
+@media screen and (min-width: 580px) {
+  .footer {
+    grid-template-columns: 20% 30% 30% auto;
+  }
+}
+
+@media screen and (min-width: 940px) {
+  .footer {
+    grid-template-columns: 12% 16% 16% auto;
+  }
+}
