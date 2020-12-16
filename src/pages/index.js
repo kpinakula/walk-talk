@@ -7,6 +7,7 @@ import HomeHero from '../components/homeHero';
 import Container from '../components/container';
 import HomeTourTypes from '../components/homeTourTypes';
 import HomeValues from '../components/homeValues';
+import HomeTestimonial from '../components/homeTestimonial';
 
 export default function Home({ data }) {
   const { cta } = data.allContentfulKeyInfo.edges[0].node.cta;
@@ -21,6 +22,7 @@ export default function Home({ data }) {
       <HomeTourTypes />
       <Spacing />
       <HomeValues />
+      <HomeTestimonial />
     </Layout>
   );
 }
