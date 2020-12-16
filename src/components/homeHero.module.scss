@@ -15,12 +15,13 @@
   }
 
   .tagline {
-    color: $light-green;
+    color: $white;
     width: 80%;
+    margin: 2rem auto;
+    line-height: 1.6;
     left: 10%;
     position: absolute;
     top: 0;
-    margin: 1em auto;   
     font-size: 1.5em;
   }
 

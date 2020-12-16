@@ -1,0 +1,12 @@
+@import '../styles/theme.scss';
+
+.border {
+  border-top: 2px solid $red-0;
+  width: 80%;
+  margin: auto;
+  // box-shadow: inset 0px 10px 8px -10px $black-opacity, inset 0 0 0 0;
+}
+
+.fullWidthBorder {
+  width: 100%;
+}

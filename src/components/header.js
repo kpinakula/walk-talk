@@ -4,7 +4,7 @@ import Img from 'gatsby-image';
 
 import styles from './header.module.scss';
 
-export default function Header({ children }) {
+export default function Header() {
   const data = useStaticQuery(graphql`
     query LogoQuery {
       file(name: { eq: "icon" }) {
@@ -28,11 +28,11 @@ export default function Header({ children }) {
       <Link className={styles.siteLogoLink} to="/">
         <Img fluid={data.file.childImageSharp.fluid} alt="Walk and Talk logo" />
       </Link>
-      <ul className={styles.navigationLinks}>
+      <nav className={styles.navigationLinks}>
         <ListLink to="/">Home</ListLink>
         <ListLink to="/about/">About</ListLink>
         <ListLink to="/contact/">Contact</ListLink>
-      </ul>
+      </nav>
     </header>
   );
 }

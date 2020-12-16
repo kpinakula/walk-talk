@@ -1,7 +1,7 @@
 import React from 'react';
 
-import '../styles/theme.scss';
+import styles from './spacing.module.scss';
 
 export default function Spacing() {
-  return <div className="spacing" style={{ height: '20px' }}></div>;
+  return <div className={styles.spacing}></div>;
 }

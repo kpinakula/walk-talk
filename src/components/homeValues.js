@@ -34,7 +34,6 @@ export default function HomeValues() {
       <Container noBg>
         <h2>Our Values</h2>
       </Container>
-      <Spacing />
       <div className={styles.valuesContainer}>
         {values.map((value, index) => {
           return (

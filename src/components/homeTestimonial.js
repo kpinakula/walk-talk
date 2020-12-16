@@ -3,6 +3,7 @@ import { useStaticQuery, graphql } from 'gatsby';
 import { renderRichText } from 'gatsby-source-contentful/rich-text';
 
 import Container from './container';
+import Spacing from './spacing';
 import styles from './homeTestimonial.module.scss';
 
 export default function HomeTestimonial() {
@@ -28,6 +29,7 @@ export default function HomeTestimonial() {
         <div className={styles.quote}>{renderRichText(testimonialQuote)}</div>
         <p className={styles.author}>{testimonialAuthor}</p>
       </div>
+      <Spacing />
     </Container>
   );
 }
