@@ -1,22 +1,10 @@
 import React from 'react';
-import { useStaticQuery, graphql, Link } from 'gatsby';
-import Img from 'gatsby-image';
+import { Link } from 'gatsby';
 
+import Logo from '../images/logo.svg';
 import styles from './header.module.scss';
 
 export default function Header() {
-  const data = useStaticQuery(graphql`
-    query LogoQuery {
-      file(name: { eq: "icon" }) {
-        childImageSharp {
-          fluid {
-            ...GatsbyImageSharpFluid
-          }
-        }
-      }
-    }
-  `);
-
   const ListLink = props => (
     <li className={styles.navigationLink}>
       <Link to={props.to}>{props.children}</Link>
@@ -25,8 +13,8 @@ export default function Header() {
 
   return (
     <header className={styles.header}>
-      <Link className={styles.siteLogoLink} to="/">
-        <Img fluid={data.file.childImageSharp.fluid} alt="Walk and Talk logo" />
+      <Link className={styles.siteLogoContainer} to="/">
+        <img className={styles.siteLogo} src={Logo} alt="Walk and Talk logo" />
       </Link>
       <nav className={styles.navigationLinks}>
         <ListLink to="/">Home</ListLink>

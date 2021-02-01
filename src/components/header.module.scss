@@ -2,9 +2,8 @@
 
 .header {
   height: 16vh;
-  padding: 0 1rem;
+  padding-right: 1.2rem;
   display: grid;
-  grid-template-columns: 10% 90%;
   position: -webkit-sticky;
   position: sticky;
   top: 0;
@@ -12,25 +11,31 @@
   background-color: $white;
   box-shadow: 0px 2px 10px -2px $black-opacity;
 
-  .siteLogoLink {
+  .siteLogoContainer {
     align-self: center;
-    min-width: 40px;
-    max-width: 80px;
-  }
-
+    justify-self: start;
+    display: grid;
   .navigationLinks {
     align-self: center;
     margin: 0;
     justify-self: end;
 
-    .navigationLink {
-      display: inline-block;
-      margin: 1rem;
-      // width: 100px;
-
-      a {
-        color: $red-0;
+    .siteLogo {
+      height: 120px;
+      max-height: 12vh;
+    }
+    
+    @media screen and (min-width: 641px) {
+      .siteLogo {
+        max-height: 112px;
       }
+    }
+  }
+}
+
+  @media screen and (min-width: 800px) {
+    .navigationLink {
+      width: 100px;
     }
   }
 }

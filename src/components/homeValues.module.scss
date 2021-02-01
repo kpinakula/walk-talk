@@ -5,7 +5,6 @@
 
   .valueContainer {
     display: grid;
-    grid-template-columns: 50% 50%;
 
     .valueImageContainer {
       position: relative;
@@ -24,38 +23,38 @@
   
       .valueName {
         position: absolute;
-        top: 40%;
-        height: 100%;
+        top: 0%;
         width: 80%;
         left: 10%;
-        color: $green-1;
-        font-size: 2rem;
+        font-weight: 500;
+        color: $orange;
+        padding: 1rem;
+        // box-shadow: $orange -20px 5px 0px 0px;
+        box-shadow: $red -20px 5px 0px 0px;
+
       }
     }
 
     .valueDescription {
       box-shadow: 0px 2px 10px -2px $black-opacity;
+      background: $orange;
+      color: $white;
       height: 100%;
-      padding: 1rem;
+      padding: 3rem;
       display: grid;
       align-items: center;
-      font-size: 0.6rem;
+      text-align: left;
 
       p {
         margin:0;
       }
     }
+  }
 
-    @media screen and (min-width: 420px) {
-      .valueDescription {
-        font-size: 0.8rem;
-      }
-    }
-
-    @media screen and (min-width: 800px) {
-      .valueDescription {
-        font-size: 1rem;
-      }
+  @media screen and (min-width: 768px) {
+    .valueContainer {
+      display: grid;
+      grid-template-columns: 50% 50%;
     }
   }
 }

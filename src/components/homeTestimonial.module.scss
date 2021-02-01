@@ -4,7 +4,7 @@
     box-shadow: 0px 2px 10px -2px $black-opacity;
     background: $green-1;
     background: $white;
-    border-left: 10px solid $red-0;
+    border-left: 10px solid $red;
     padding: 3rem;
     quotes: "\201C""\201D""\2018""\2019";
 
@@ -25,7 +25,7 @@
   }
 
   .container:before {
-    color: $red-0;
+    color: $orange;
     content: open-quote;
     font-size: 4em;
     line-height: 0.1em;

@@ -2,7 +2,7 @@
 
 .footer {
   padding: 1rem;
-  background-color: $dark-grey;
+  background-color: $brown;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
 
@@ -37,7 +37,7 @@
   }
 }
 
-@media screen and (min-width: 580px) {
+@media screen and (min-width: 641px) {
   .footer {
     grid-template-columns: 20% 30% 30% auto;
   }

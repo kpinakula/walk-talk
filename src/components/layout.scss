@@ -1,5 +1,15 @@
 html {
   body {
     text-align: center;
+    @media screen and (min-width: 1440px) {
+      .content {
+        max-width: 1440px;
+        margin: auto;
+        background: #f8f6f4;
+      }
+    }
+  }
+  img {
+    margin: 0;
   }
 }

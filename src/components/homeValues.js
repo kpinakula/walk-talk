@@ -45,7 +45,7 @@ export default function HomeValues() {
                   style={{ height: '100%', width: '100%' }}
                   imgStyle={{ objectFit: 'cover' }}
                 />
-                <h3 className={styles.valueName}>{value.title}</h3>
+                <h2 className={styles.valueName}>{value.title}</h2>
               </div>
               <div className={styles.valueDescription}>
                 {renderRichText(value.description)}

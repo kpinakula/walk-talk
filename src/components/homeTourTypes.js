@@ -35,6 +35,7 @@ export default function HomeTourTypes() {
             <Img
               fluid={tourType.tourImage.fluid}
               alt={tourType.tourImage.title}
+              className={styles.tourImage}
             />
             <p className={styles.tourType}>{tourType.tourTypeTitle}</p>
             <div className={styles.tourTypeDescription}>

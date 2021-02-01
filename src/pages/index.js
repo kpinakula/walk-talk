@@ -13,13 +13,15 @@ export default function Home({ data }) {
 
   return (
     <Layout>
-      <HomeHero />
-      <Container noBg>
-        <h2>{cta}</h2>
-      </Container>
-      <HomeTourTypes />
-      <HomeValues />
-      <HomeTestimonial />
+      <div className="content">
+        <HomeHero />
+        <Container noBg>
+          <h2>{cta}</h2>
+        </Container>
+        <HomeTourTypes />
+        <HomeValues />
+        <HomeTestimonial />
+      </div>
     </Layout>
   );
 }
